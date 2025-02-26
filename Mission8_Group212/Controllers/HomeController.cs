@@ -28,5 +28,7 @@ namespace Mission8_Group212.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        //Making Dallen's Changes
     }
 }
