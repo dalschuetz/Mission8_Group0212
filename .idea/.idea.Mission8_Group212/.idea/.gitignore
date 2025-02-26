@@ -4,8 +4,10 @@
 # Rider ignored files
 /contentModel.xml
 /modules.xml
-/projectSettingsUpdater.xml
+
 /.idea.Mission8_Group212.iml
+/projectSettingsUpdater.xml
+
 # Editor-based HTTP Client requests
 /httpRequests/
 # Datasource local storage ignored files
