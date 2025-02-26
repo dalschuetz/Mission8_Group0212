@@ -1,0 +1,67 @@
+@model Mission8_Group212.Models.Task
+
+@{
+    ViewData["Title"] = "Add Task";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center mb-4">Task Form</h1>
+
+<div class="container w-50">
+    <form method="post" class="card p-4 shadow">
+        <input type="hidden" asp-for="TaskId" />
+
+        <!-- Quadrant Dropdown -->
+        <div class="mb-3">
+            <label asp-for="QuadId" class="form-label">Quadrant:</label>
+            <select asp-for="QuadId" class="form-select">
+                <option value="">Select a Quadrant</option>
+                @foreach (var q in ViewBag.Quadrants)
+                {
+                    <option value="@q.QuadId">@q.QuadType</option>
+                }
+            </select>
+            <span asp-validation-for="QuadId" class="text-danger"></span>
+        </div>
+
+        <!-- Category Dropdown -->
+        <div class="mb-3">
+            <label asp-for="CategoryId" class="form-label">Category:</label>
+            <select asp-for="CategoryId" class="form-select">
+                <option value="">Select a Category</option>
+                @foreach (var c in ViewBag.Categories)
+                {
+                    <option value="@c.CategoryId">@c.CategoryName</option>
+                }
+            </select>
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
+        </div>
+
+        <!-- Task Name -->
+        <div class="mb-3">
+            <label asp-for="TaskName" class="form-label">Task:</label>
+            <input asp-for="TaskName" class="form-control" />
+            <span asp-validation-for="TaskName" class="text-danger"></span>
+        </div>
+
+        <!-- Due Date -->
+        <div class="mb-3">
+            <label asp-for="DueDate" class="form-label">Due Date:</label>
+            <input asp-for="DueDate" type="date" class="form-control" />
+            <span asp-validation-for="DueDate" class="text-danger"></span>
+        </div>
+
+        <!-- Completed -->
+        <div class="mb-3">
+            <label asp-for="Completed" class="form-label">Completed:</label>
+            <select asp-for="Completed" class="form-select">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Submit</button>
+
+        <div asp-validation-summary="All" class="text-danger mt-3"></div>
+    </form>
+</div>
