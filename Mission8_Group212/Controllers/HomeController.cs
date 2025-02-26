@@ -30,5 +30,11 @@ namespace Mission8_Group212.Controllers
         }
 
         //Making Dallen's Changes
+
+        public IActionResult Quadrants() {
+            return View();
+        }
+
+
     }
 }
