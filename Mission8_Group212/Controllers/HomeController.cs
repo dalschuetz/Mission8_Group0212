@@ -35,6 +35,9 @@ namespace Mission8_Group212.Controllers
             return View();
         }
 
-
+        public IActionResult TaskForm()
+        {
+            return View();
+        }
     }
 }
