@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Mission8_Group212.Models;
 
-public class Task
+public class TaskModel
 {
     [Key]
     public int TaskId { get; set; }

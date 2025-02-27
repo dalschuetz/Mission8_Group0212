@@ -6,32 +6,25 @@ namespace Mission8_Group212.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private TaskModel _task;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(TaskModel instance)
         {
-            _logger = logger;
+            _task = instance;
         }
-
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        [HttpGet]
+        public IActionResult Quadrants()
         {
             return View();
         }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpPost]
+        public IActionResult Quadrants(int TaskId)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-
-        //Making Dallen's Changes
-
-        public IActionResult Quadrants() {
             return View();
         }
 
@@ -39,5 +32,7 @@ namespace Mission8_Group212.Controllers
         {
             return View();
         }
+
+
     }
 }
