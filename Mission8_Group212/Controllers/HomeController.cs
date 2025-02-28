@@ -89,7 +89,7 @@ namespace Mission8_Group212.Controllers
             var deleteableTask = _context.Tasks
                 .Single(x => x.TaskId == id);
 
-            return View(deleteableTask);
+            return RedirectToAction("Quadrants");
         }
 
         [HttpPost]
@@ -98,7 +98,7 @@ namespace Mission8_Group212.Controllers
             _context.Remove(deletedTask);
             _context.SaveChanges();
 
-            return RedirectToAction("MovieList");
+            return RedirectToAction("Quadrants");
         }
 
     }

@@ -15,12 +15,12 @@ public class TaskModel
     //Foreign key to Quadrant table returns a quad
     [ForeignKey("QuadId")] 
     public int QuadId { get; set; }
-    public Quadrant Quad {get;set;}
+    
     
     //foreign key to Category Table. returns a cat
     [ForeignKey("CategoryId")] 
     public int CategoryId { get; set; }
-    public Category Cat {get;set;}
+   
     
     
     
