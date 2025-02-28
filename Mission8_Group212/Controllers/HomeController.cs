@@ -89,7 +89,7 @@ namespace Mission8_Group212.Controllers
             var deleteableTask = _context.Tasks
                 .Single(x => x.TaskId == id);
 
-            return RedirectToAction("Quadrants");
+            return View(deleteableTask);
         }
 
         [HttpPost]
