@@ -98,7 +98,7 @@ namespace Mission8_Group212.Controllers
             _context.Remove(deletedTask);
             _context.SaveChanges();
 
-            return RedirectToAction("Quadrants");
+            return RedirectToAction("MovieList");
         }
 
     }
