@@ -28,7 +28,7 @@
         </div>
         <div class="col-5 border border-secondary">
             <h4>Quadrant 2</h4>
-            @foreach (var x in Model.Where(m => m.QuadId == 2 && m.Completed == 0))
+            @foreach (var x in Model.Where(m => m.QuadId == 3 && m.Completed == 0))
             {
                 <span>@x.TaskName @x.DueDate</span>
                 <a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-id="@x.TaskId">Update</a>
@@ -40,7 +40,7 @@
         <div class="col-1 border border-secondary" style="transform: rotate(180deg); writing-mode: vertical-lr;"><h4>Not Important</h4></div>
         <div class="col-6 border border-secondary">
             <h4>Quadrant 3</h4>
-            @foreach (var x in Model.Where(m => m.QuadId == 3 && m.Completed == 0))
+            @foreach (var x in Model.Where(m => m.QuadId == 2 && m.Completed == 0))
             {
                 <span>@x.TaskName @x.DueDate</span>
                 <a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-id="@x.TaskId">Update</a>
