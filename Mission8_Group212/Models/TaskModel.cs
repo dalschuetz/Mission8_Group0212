@@ -20,9 +20,6 @@ public class TaskModel
     //foreign key to Category Table. returns a cat
     [ForeignKey("CategoryId")] 
     public int CategoryId { get; set; }
-    public Category Cat {get;set;}
-    
-    
     
     
 }
